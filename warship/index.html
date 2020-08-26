@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Морской бой!</h1>
+        <h4>однопалубных кораблей</h4>
+    </header>
+
+    <div class="first-control">
+        <div style="text-align: center;">
+            <label>Количество кораблей</label><br>
+            <input style="text-align: center;" type="number" id="numShips">
+        </div>
+        <hr>
+        <div style="text-align: center;">
+            <label>Вариант расстановки кораблей</label><br>
+            <label><input type="radio" name="positioning" id="random" checked>Случайный</label>
+            <label><input type="radio" name="positioning" id="hand">Ручной</label>
+        </div>
+        <hr>
+        <div style="width: min-content">
+            <button id="set_position" disabled>Расставить корабли</button>
+        </div>
+    </div>
+
+    <div class="mainDiv">
+
+        <div class="ourDiv">
+            <h2>Поле союзников</h2>
+            <div class="horizont">
+                <!-- <div></div> -->
+                <div>A</div>
+                <div>Б</div>
+                <div>В</div>
+                <div>Г</div>
+                <div>Д</div>
+                <div>Е</div>
+                <div>Ж</div>
+                <div>З</div>
+                <div>И</div>
+                <div>К</div>
+            </div>
+            <div class="vertical">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+            <table class="table-our" id="ally">
+            </table>
+            <div id="on_off_ally" class="enable_field"></div>
+        </div>
+
+        <div class="opponentDiv">
+            <h2>Поле противника</h2>
+            <div class="horizont">
+                <!-- <div></div> -->
+                <div>A</div>
+                <div>Б</div>
+                <div>В</div>
+                <div>Г</div>
+                <div>Д</div>
+                <div>Е</div>
+                <div>Ж</div>
+                <div>З</div>
+                <div>И</div>
+                <div>К</div>
+            </div>
+            <div class="vertical">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+            <table class="table-our" id="enemy"></table>
+            <div id="on_off_enemy" class="enable_field"></div>
+        </div>
+
+    </div>
+    <div class="icon-ships">
+        <div class="icon_ally_ships">
+        </div>
+        <div class="icon_enemy_ships"></div>
+    </div>
+    <div class="info-step">
+        <div class="ally_step">
+            <label id="en_st"></label>
+        </div>
+        <div class="enemy_step">
+            <label id="al_st"></label>
+        </div>
+    </div>
+    <div class="to-battle">
+        <button class="battle">В БОЙ</button>
+    </div>
+
+    <div id="rev-div" class="res-disable">
+        <div class="dis_all"></div>
+        <div class="rez_view_div">
+            <h2 id="winner_label"></h2>
+            <textarea id="rezult_textarea"></textarea><br>
+            <button id="reset"></button>
+        </div>
+    </div>
+
+    <div class="sound">
+        <label><input type="checkbox" id="sound_off"> Отключить звук</label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

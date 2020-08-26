@@ -1,0 +1,287 @@
+body {
+  background-image: url("assets/sea.jpg");
+}
+
+header h1,
+header h4 {
+  text-align: center;
+}
+
+.first-control {
+  visibility: visible;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 550px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: rgba(46, 139, 86, 0.5);
+}
+.first-control hr {
+  margin: -8px auto;
+}
+.first-control input {
+  background-color: mediumaquamarine;
+  font-weight: bold;
+  font-size: 20px;
+  max-width: 50px;
+}
+.first-control input:focus {
+  outline: none;
+}
+.first-control button {
+  padding: 5px;
+  background-color: mediumaquamarine;
+}
+.first-control button:hover {
+  background-color: #56ad90;
+}
+.first-control button:focus {
+  outline: none;
+}
+
+.first-control-off {
+  visibility: hidden;
+}
+
+.mainDiv {
+  margin: 0 auto;
+  padding: 5px;
+  max-width: 1000px;
+  min-width: 950px;
+  display: flex;
+  justify-content: space-between;
+}
+.mainDiv .ourDiv {
+  width: 470px;
+  height: 500px;
+  position: relative;
+}
+.mainDiv .opponentDiv {
+  width: 470px;
+  height: 500px;
+  position: relative;
+}
+.mainDiv h2 {
+  text-align: center;
+  margin: 0px;
+}
+.mainDiv .disable_field {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 18px;
+  background-color: rgba(197, 197, 197, 0.25);
+  transition: background-color 0.5s;
+}
+.mainDiv .enable_field {
+  display: none;
+}
+
+.horizont {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 18px;
+}
+.horizont div {
+  font-weight: bold;
+}
+
+.vertical {
+  width: 18px;
+  text-align: center;
+  height: 453px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.vertical div {
+  font-weight: bold;
+}
+
+.table-our {
+  width: 452px;
+  height: 452px;
+  background-color: rgba(0, 255, 255, 0.25);
+  position: absolute;
+  top: 48px;
+  left: 18px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.table-our td {
+  border: 1px solid black;
+  padding: 0;
+}
+.table-our div {
+  height: 100%;
+  transition: background-color 0.3s;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+.table-our .main_behavior:hover {
+  border: 3px solid #fdf904;
+}
+.table-our .play:hover {
+  border: 3px solid #fdf904;
+}
+.table-our .err_set_ship:hover {
+  border: 3px solid red;
+}
+.table-our .ship {
+  background-image: url("assets/ship2.jpg");
+  background-position: center;
+}
+.table-our .miss_target {
+  background-image: url("assets/miss2.jpg");
+  background-position: center;
+}
+.table-our .empty_cell {
+  background-image: url("assets/empty2.jpg");
+  background-position: center;
+}
+.table-our .dead_ship {
+  background-image: url("assets/dead2.jpg");
+  background-position: center;
+}
+
+.icon-ships {
+  max-width: 1000px;
+  min-width: 950px;
+  margin: 10px auto;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-ships .icon_ally_ships {
+  height: 30px;
+  width: 450px;
+  margin-left: 18px;
+  display: flex;
+  justify-content: center;
+}
+.icon-ships .icon_enemy_ships {
+  height: 30px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+.icon-ships .base_icon {
+  width: 20px;
+  height: 20px;
+  margin: 0px 3px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+.icon-ships .init_ship {
+  background-color: #cbcfd1;
+}
+.icon-ships .alive_ship {
+  background-color: steelblue;
+}
+.icon-ships .dead_ship_icon {
+  background-color: red;
+}
+
+.to-battle {
+  display: none;
+  text-align: center;
+}
+.to-battle .battle {
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  animation: anim_battle 2s infinite;
+}
+.to-battle .battle:hover {
+  border: 3px solid black;
+}
+@keyframes anim_battle {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: #fc4949;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: #fc4949;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.to-battle-on {
+  display: block;
+}
+
+.info-step {
+  max-width: 1000px;
+  min-width: 950px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.info-step .ally_step {
+  width: 450px;
+  margin-left: 20px;
+}
+.info-step .enemy_step {
+  width: 450px;
+}
+
+.dis_all {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.res-disable {
+  display: none;
+}
+
+.rez_view_div {
+  display: block;
+  width: 350px;
+  padding-bottom: 20px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-left: -175px;
+  border-radius: 10px;
+  text-align: center;
+}
+.rez_view_div textarea {
+  resize: none;
+  width: 200px;
+  height: 100px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding: 5px;
+  background-color: inherit;
+  border-bottom: none;
+  border-right: none;
+  border-top: none;
+  border-left-width: medium;
+  border-left-color: darkcyan;
+}
+.rez_view_div button {
+  padding: 5px;
+  font-weight: bold;
+}
+
+.sound {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+}

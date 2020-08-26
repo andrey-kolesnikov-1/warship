@@ -1,0 +1,338 @@
+body {
+    background-image: url('assets/sea.jpg');
+}
+
+header {
+
+    h1,
+    h4 {
+        text-align: center;
+    }
+}
+
+.first-control {
+    visibility: visible;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: rgba(46, 139, 86, 0.5);
+
+    hr {
+        margin: -8px auto;
+    }
+
+    input {
+        background-color: mediumaquamarine;
+        font-weight: bold;
+        font-size: 20px;
+        max-width: 50px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        padding: 5px;
+        background-color: mediumaquamarine;
+
+        &:hover {
+            background-color: rgb(86, 173, 144);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.first-control-off {
+    visibility: hidden;
+}
+
+
+.mainDiv {
+    margin: 0 auto;
+    padding: 5px;
+    max-width: 1000px;
+    min-width: 950px;
+    display: flex;
+    justify-content: space-between;
+
+    .ourDiv {
+        width: 470px;
+        height: 500px;
+        position: relative;
+    }
+
+    .opponentDiv {
+        width: 470px;
+        height: 500px;
+        position: relative;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0px;
+    }
+
+    .disable_field {
+        position: absolute;
+        top: 48px;
+        right: 0;
+        bottom: 0;
+        left: 18px;
+        background-color: rgba(197, 197, 197, 0.25);
+        transition: background-color 0.5s;
+    }
+
+    .enable_field {
+        display: none;
+    }
+}
+
+.horizont {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 18px;
+
+    div {
+        font-weight: bold;
+    }
+}
+
+.vertical {
+    width: 18px;
+    text-align: center;
+    height: 453px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    div {
+        font-weight: bold;
+    }
+}
+
+.table-our {
+    width: 452px;
+    height: 452px;
+    background-color: rgba(0, 255, 255, 0.25);
+    position: absolute;
+    top: 48px;
+    left: 18px;
+
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    td {
+        border: 1px solid black;
+        padding: 0;
+    }
+
+    div {
+        height: 100%;
+        transition: background-color 0.3s;
+        border: 3px solid rgba(0, 0, 0, 0);
+    }
+
+    .main_behavior {
+        &:hover {
+            border: 3px solid rgb(253, 249, 4);
+        }
+    }
+
+    .play {
+        &:hover {
+            border: 3px solid rgb(253, 249, 4);
+        }
+    }
+
+    .err_set_ship {
+        &:hover {
+            border: 3px solid rgb(255, 0, 0);
+        }
+    }
+
+    .ship {
+        background-image: url('assets/ship2.jpg');
+        background-position: center;
+    }
+
+    .miss_target {
+        background-image: url('assets/miss2.jpg');
+        background-position: center;
+    }
+
+    .empty_cell {
+        background-image: url('assets/empty2.jpg');
+        background-position: center;
+    }
+
+    .dead_ship {
+        background-image: url('assets/dead2.jpg');
+        background-position: center;
+    }
+}
+
+.icon-ships {
+    max-width: 1000px;
+    min-width: 950px;
+    margin: 10px auto;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+
+    .icon_ally_ships {
+        height: 30px;
+        width: 450px;
+        margin-left: 18px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon_enemy_ships {
+        height: 30px;
+        width: 450px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .base_icon {
+        width: 20px;
+        height: 20px;
+        margin: 0px 3px;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+
+    .init_ship {
+        background-color: rgb(203, 207, 209);
+    }
+
+    .alive_ship {
+        background-color: steelblue;
+    }
+
+    .dead_ship_icon {
+        background-color: red;
+    }
+
+}
+
+.to-battle {
+    display: none;
+    text-align: center;
+
+    .battle {
+        padding: 10px 20px;
+        font-size: 30px;
+        font-weight: bold;
+        border-radius: 5px;
+        animation: anim_battle 2s infinite;
+
+        &:hover {
+            border: 3px solid black;
+        }
+    }
+
+    @keyframes anim_battle {
+        0% {
+            background-color: red;
+        }
+
+        25% {
+            background-color: rgb(252, 73, 73);
+        }
+
+        50% {
+            background-color: red;
+        }
+
+        75% {
+            background-color: rgb(252, 73, 73);
+        }
+
+        100% {
+            background-color: red;
+        }
+    }
+}
+
+.to-battle-on {
+    display: block;
+}
+
+.info-step {
+    max-width: 1000px;
+    min-width: 950px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    .ally_step {
+        width: 450px;
+        margin-left: 20px;
+    }
+
+    .enemy_step {
+        width: 450px;
+    }
+}
+
+.dis_all {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.res-disable {
+    display: none;
+}
+
+.rez_view_div {
+    display: block;
+    width: 350px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -175px;
+    border-radius: 10px;
+    text-align: center;
+
+    textarea {
+        resize: none;
+        width: 200px;
+        height: 100px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+        padding: 5px;
+        background-color: inherit;
+        border-bottom: none;
+        border-right: none;
+        border-top: none;
+        border-left-width: medium;
+        border-left-color: darkcyan;
+    }
+
+    button {
+        padding: 5px;
+        font-weight: bold;
+    }
+}
+
+.sound {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
